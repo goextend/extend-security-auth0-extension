@@ -1,0 +1,53 @@
+{
+    "title": "Extend Security",
+    "name": "extend-security",
+    "version": "0.8.0",
+    "author": "extend",
+    "description": "This extension helps to create the required artifacts at Auth0 for enabling Extend security model v2",
+    "type": "application",
+    "logoUrl": "https://goextend.io/images/rounded-logo.png",
+    "initialUrlPath": "/login",
+    "category": "Extend",
+    "repository": "https://github.com/goextend/extend-security-extension",
+    "keywords": [
+      "auth0",
+      "extension",
+      "extend",
+      "security"
+    ],
+    "auth0": {
+      "createClient": true,
+      "onUninstallPath": "/.extensions/on-uninstall",
+      "onInstallPath": "/.extensions/on-install",
+      "scopes": "read:resource_servers create:resource_servers read:clients create:clients read:rules create:rules"
+    },
+    "secrets": {
+      "OWNER": {
+        "description": "The email of the owner of the Extend deployment. It can modified on the authorization rule afterwards.",
+        "required": true,
+        "example": "john.doe@acme.com"
+      },
+      "API_NAME": {
+        "description": "The name for the API",
+        "required": true,
+        "default": "Extend API"
+      },
+      "API_AUDIENCE": {
+        "description": "Your Extend deployment URL",
+        "required": true,
+        "example": "https://acme.auth0-extend.com"
+      },
+      "WEBSITE_CLIENT_NAME": {
+        "description": "A client for identifying your website",
+        "required": true,
+        "default": "Website",
+        "type": "text"
+      },
+      "EXTEND_DEPLOYMENT_CLIENT": {
+        "description": "A client for identifying the Extend deployment",
+        "required": true,
+        "type": "text",
+        "default": "Extend Deployment"
+      }
+    }
+  }

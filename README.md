@@ -1,3 +1,6 @@
+# Archived
+With the end-of-life of the extend.io service, This repository has been archived.
+
 # Auth0 Extension - Extend Security
 
 Extend Security extension helps you to create the required artifacts for enabling the new Extend security model using Auth0 as the identity provider.
